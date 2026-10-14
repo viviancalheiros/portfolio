@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import { House, BookUser, FolderCode } from 'lucide-react';
+import Link from "next/link";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -14,10 +15,19 @@ export default function Header () {
                 <span className={`${inter.className} md:uppercase md:self-end md:block hidden`}>/ Desenvolvedora</span>
             </div>
             {/* Em telas médias */}
-            <div className="md:w-1/4 md:grid grid-cols-3 divide-x-2 hidden">
-                <button className="flex justify-center">Home</button>
-                <button className="flex justify-center">Sobre</button>
-                <button className="flex justify-center mr-4">Projetos</button>
+            <div className="md:w-full md:flex flex-row text-center gap-10 align-center justify-end mr-10 hidden">
+                <button className="hover:border-b-3 hover:mb-1 w-20 cursor-pointer">
+                    <Link href="/">
+                        Home
+                    </Link>
+                </button>
+                <button className="hover:border-b-3 hover:mb-1 w-20 cursor-pointer">
+                    <Link href="/about">Sobre</Link>
+                </button>
+                <button className="hover:border-b-3 hover:mb-1 w-20 cursor-pointer">
+                    <Link href="/projects">Projetos</Link>
+                </button>
+                
             </div>
             {/* Em telas pequenas: apenas ícones */}
             <div className="md:hidden w-2/4 flex flex-row justify-around">

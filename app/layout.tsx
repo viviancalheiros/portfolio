@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Merriweather } from "next/font/google";
-import "./globals.css"
+import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
