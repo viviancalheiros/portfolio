@@ -9,7 +9,7 @@ const inter = Inter({
 
 export default function Header () {
     return (
-        <div className="w-screen md:h-16 h-20 bg-purple-dark text-white flex flex-col gap-2 justify-center flex-row items-center">
+        <div className="w-screen md:h-20 h-20 bg-purple-dark text-white flex flex-row gap-2 justify-center  items-center">
             <div className="w-2/4 justify-center md:w-3/4 md:justify-start flex flex-row h-fit gap-2">
                 <span className="font-semibold md:text-2xl md:ml-4">Vívian Calheiros</span>
                 <span className={`${inter.className} md:uppercase md:self-end md:block hidden`}>/ Desenvolvedora</span>
@@ -31,9 +31,9 @@ export default function Header () {
             </div>
             {/* Em telas pequenas: apenas ícones */}
             <div className="md:hidden w-2/4 flex flex-row justify-around">
-                <House />
-                <BookUser />
-                <FolderCode />
+                <Link href="/"><House /></Link>
+                <Link href="/about"><BookUser /></Link>
+                <Link href="/projects"><FolderCode /></Link>
             </div>
         </div>
     )
