@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Merriweather } from "next/font/google";
+import { Averia_Serif_Libre } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const merriweather = Merriweather({
+const averia = Averia_Serif_Libre({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-serif",
@@ -23,7 +23,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="pt-BR">
-      <body className={`${merriweather.className} h-screen flex flex-col justify-between`}>
+      <body className={`${averia.className}`}>
         <Header />
         {children}
         <Footer />
