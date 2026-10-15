@@ -1,9 +1,16 @@
-import LinkedinIcon from "@/assets/linkedin-icon";
+import { TiSocialLinkedinCircular } from "react-icons/ti";
+import { VscGithub } from "react-icons/vsc";
+import Link from "next/link";
 
 export default function Footer () {
     return (
-        <div className="w-full h-16 bg-purple-dark text-white flex flex-row items-center justify-center">
-            <LinkedinIcon size={40}/>
+        <div className="w-full h-16 bg-purple-dark text-white flex flex-row items-center justify-center gap-2">
+            <Link href={"https://www.linkedin.com/in/v%C3%ADvian-calheiros/"}>
+                <TiSocialLinkedinCircular size={44} />
+            </Link>
+            <Link href="https://github.com/viviancalheiros">
+                <VscGithub size={32} />
+            </Link>
         </div>
     )
 }

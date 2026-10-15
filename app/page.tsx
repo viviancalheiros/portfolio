@@ -4,14 +4,14 @@ import Reveal from '@/components/Reveal';
 export default function Home() {
   return (
     <div className='w-full overflow-x-clip'>
-      <div className="w-full h-screen -mt-10 flex flex-col md:flex-row items-center gap-10">
+      <div className="w-full mt-16 mb-12 md:h-screen md:mb-0 md:-mt-10 flex flex-col md:flex-row items-center gap-10">
         <div className="w-1/2 flex items-center justify-end">
           <Reveal direction="left">
               <Image
                 src="/home/me.jpg"
                 alt="Foto de Vívian"
-                width={300}
-                height={300}
+                width={280}
+                height={280}
                 style={{ borderRadius: "20px" }}
               />
           </Reveal>
@@ -20,7 +20,7 @@ export default function Home() {
           <Reveal direction="right">
             <p className="text-3xl md:text-4xl mb-4 font-semibold">Oie!</p>
             <p className="text-2xl/11 md:text-3xl/12">Sou Vívian,</p>
-            <p className="text-xl/9 md:w-1/2 md:text-3xl/11">desenvolvedora front-end focada em design de interfaces intuitivas e acessíveis.</p>
+            <p className="text-lg/8 text-justify md:w-1/2 md:text-2xl/11">desenvolvedora front-end focada em design de interfaces intuitivas e acessíveis.</p>
           </Reveal>
         </div>
       </div>
