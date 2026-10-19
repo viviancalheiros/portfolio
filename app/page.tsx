@@ -3,9 +3,9 @@ import Reveal from '@/components/Reveal';
 
 export default function Home() {
   return (
-    <div className='w-full overflow-x-clip'>
-      <div className="w-full mt-16 mb-12 md:h-screen md:mb-0 md:-mt-10 flex flex-col md:flex-row items-center gap-10">
-        <div className="w-1/2 flex items-center justify-end">
+    <div className='w-full overflow-x-clip dark:bg-[#14001A] text-shadow-sm text-purple-dark dark:text-[#F7F4ED]'>
+      <div className="w-full mt-16 mb-12 md:h-screen md:mb-0 md:mt-0 flex flex-col md:flex-row items-center gap-10">
+        <div className="w-1/2 md:-mt-24 flex items-center justify-end">
           <Reveal direction="left">
               <Image
                 src="/home/me.jpg"
@@ -13,10 +13,11 @@ export default function Home() {
                 width={280}
                 height={280}
                 style={{ borderRadius: "20px" }}
+                className='shadow-lg'
               />
           </Reveal>
         </div>
-        <div className="w-4/5 md:w-1/2 flex flex-col justify-left text-purple-dark">
+        <div className="w-4/5 md:-mt-24 md:w-1/2 flex flex-col justify-left">
           <Reveal direction="right">
             <p className="text-3xl md:text-4xl mb-4 font-semibold">Oie!</p>
             <p className="text-2xl/11 md:text-3xl/12">Sou Vívian,</p>
@@ -25,7 +26,7 @@ export default function Home() {
         </div>
       </div>
       <div className='w-full flex flex-col items-center'>
-        <div className="w-4/5 md:w-2/3 flex flex-col md:flex-row mb-12">
+        <div className="w-4/5 md:-mt-12 md:w-2/3 flex flex-col md:flex-row mb-12">
           <div className='md:w-1/4'>
             <Reveal direction='left'>
               <p className="text-2xl/11 font-semibold mb-4">

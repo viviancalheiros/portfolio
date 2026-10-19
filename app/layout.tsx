@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Averia_Serif_Libre } from "next/font/google";
 import "./globals.css";
+import Providers from "./providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -22,11 +23,13 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${averia.className}`}>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+            {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   )

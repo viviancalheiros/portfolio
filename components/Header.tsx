@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { FolderCode } from 'lucide-react';
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -9,7 +10,7 @@ const inter = Inter({
 
 export default function Header () {
     return (
-        <div className="w-full md:h-16 h-20 bg-purple-dark text-white flex flex-row gap-2 justify-center items-center">
+        <div className="w-full h-20 bg-purple-dark dark:bg-[#390047] text-white font-bold flex flex-row gap-2 justify-center items-center shadow-lg">
             <Link href="/" className="w-1/2 justify-center md:w-3/4 md:ml-10 md:justify-start flex flex-row h-fit gap-2">
                 <span className="font-semibold md:text-2xl md:ml-4">Vívian Calheiros</span>
                 <span className={`${inter.className} md:text-sm md:uppercase md:self-center md:mt-2 md:block hidden`}>/ Desenvolvedora</span>
@@ -19,6 +20,7 @@ export default function Header () {
                 <button className="hover:border-b-3 hover:mb-1 w-20 cursor-pointer">
                     <Link href="/projects">Projetos</Link>
                 </button>
+                <ThemeToggle />
             </div>
             {/* Em telas pequenas: apenas ícones */}
             <div className="md:hidden w-1/2 flex flex-row justify-end mr-10">
