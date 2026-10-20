@@ -18,11 +18,26 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="focus:outline-none cursor-pointer"
+      type="button"
+      role="switch"
+      aria-checked={isDark()}
+      aria-label="Alternar modo escuro"
       onClick={() => setTheme(isDark() ? "light" : "dark")}
-      aria-label="Mudar tema"
+      className={`relative flex h-7 w-14 cursor-pointer items-center rounded-full p-1 transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 ${
+        isDark() ? "bg-slate-600" : "bg-zinc-400"
+      }`}
     >
-      {isDark() ? <BiSun size={20} /> : <BiMoon size={20} />}
+      <span
+        className={`flex h-5 w-5 items-center justify-center rounded-full bg-gray-200 shadow-md transition-transform duration-300 ${
+          isDark() ? "translate-x-7" : "translate-x-0"
+        }`}
+      >
+        {isDark() ? (
+          <BiMoon size={14} className="text-gray-800" />
+        ) : (
+          <BiSun size={14} className="text-amber-600" />
+        )}
+      </span>
     </button>
   );
 }
