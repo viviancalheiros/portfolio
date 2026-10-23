@@ -17,14 +17,14 @@ export default function Header () {
             </Link>
             {/* Em telas médias */}
             <div className="w-full md:flex flex-row text-lg text-center gap-10 align-center justify-end mr-16 hidden">
-                <button className="hover:border-b-3 hover:mb-1 w-20 cursor-pointer">
+                {/* <button className="hover:border-b-3 hover:mb-1 w-20 cursor-pointer">
                     <Link href="/projects">Projetos</Link>
-                </button>
+                </button> */}
                 <ThemeToggle />
             </div>
             {/* Em telas pequenas: apenas ícones */}
             <div className="md:hidden w-1/2 flex flex-row gap-4 justify-end items-center mr-10">
-                <Link href="/projects"><FolderCode /></Link>
+                {/* <Link href="/projects"><FolderCode /></Link> */}
                 <ThemeToggle />
             </div>
         </div>
